@@ -154,7 +154,7 @@ public class Complex {
         if (this.equals(ONE)){
             throw new ArithmeticException("divide by zero");
         }
-        double m = squaredModulus();
+        double m = modulus();
         return new Complex(real / m, imaginary / m);
     }
 

@@ -154,8 +154,8 @@ public class Complex {
         if (this.equals(ONE)){
             throw new ArithmeticException("divide by zero");
         }
-        double m = modulus();
-        return new Complex(real / m, imaginary / m);
+        double m = squaredModulus();
+        return new Complex(real / m, -imaginary / m);
     }
 
     /**
@@ -170,7 +170,7 @@ public class Complex {
         }
         double m = divisor.squaredModulus();
         return new Complex(
-                (this.real + divisor.real + this.imaginary + divisor.imaginary) / m,
+                (this.real * divisor.real + this.imaginary * divisor.imaginary) / m,
                 (this.imaginary * divisor.real - this.real * divisor.imaginary) / m
         );
     }

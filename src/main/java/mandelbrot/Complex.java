@@ -224,8 +224,8 @@ public class Complex {
     @Override
     public String toString() {
         return "Complex{" +
-                "real=" + imaginary +
-                ", imaginary=" + imaginary +
+                "real=" + this.real +
+                ", imaginary=" + this.imaginary +
                 '}';
     }
 }
